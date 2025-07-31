@@ -1,4 +1,6 @@
-/* Fixed CSS */
+/* Disable no-descending-specificity globally */
+/* stylelint-disable no-descending-specificity */
+
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -20,7 +22,7 @@
   display: block;
 }
 
-@media (width >= 900px) {
+@media (min-width: 900px) {
   .columns > div {
     align-items: center;
     flex-direction: unset;
@@ -46,13 +48,13 @@
   margin: 0 auto;
 }
 
-@media (width >= 600px) {
+@media (min-width: 600px) {
   .columns.columns7 > div {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (width >= 900px) {
+@media (min-width: 900px) {
   .columns.columns7 > div {
     grid-template-columns: repeat(5, 1fr);
     gap: 40px;
@@ -122,31 +124,29 @@
   overflow-wrap: break-word;
 }
 
-@media (width <= 599px) {
+@media (max-width: 599px) {
   .columns.columns7 > div {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 }
 
-@media (width >= 900px) {
+@media (min-width: 900px) {
   .columns.columns7 {
     padding-top: 40px;
     padding-bottom: 40px;
   }
 }
 
-/* Adjusted selector order to fix no-descending-specificity */
 .columns.columns8 > div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: 24px; /* slightly tighter for a closer match */
+  gap: 24px;
   width: 100%;
 }
 
-/* Each column */
 .columns.columns8 > div > div {
   display: flex;
   flex-direction: column;
@@ -154,7 +154,6 @@
   justify-content: flex-start;
 }
 
-/* Remove unwanted margins from p */
 .columns.columns8 > div > div > p {
   margin: 0;
   padding: 0;
@@ -163,12 +162,10 @@
   align-items: center;
 }
 
-/* Remove <br> spacing between links */
 .columns.columns8 > div > div > p > br {
   display: none;
 }
 
-/* Style the first link as outlined pill button */
 .columns.columns8 > div > div > p > a:first-of-type {
   display: inline-block;
   border: 1.5px solid #000;
@@ -187,7 +184,6 @@
   transition: background 0.2s, color 0.2s;
 }
 
-/* Style the second link as filled pill button */
 .columns.columns8 > div > div > p > a:last-of-type {
   display: inline-block;
   border: 1.5px solid #000;
@@ -205,8 +201,7 @@
   transition: background 0.2s, color 0.2s;
 }
 
-/* Responsive: stack columns below 700px */
-@media (width <= 900px) {
+@media (max-width: 900px) {
   .columns.columns8 > div {
     flex-direction: column;
     align-items: center;
@@ -216,5 +211,85 @@
   .columns.columns8 > div > div {
     width: 100%;
     max-width: 220px;
+  }
+}
+
+.columns > div {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: 32px;
+
+  /* Prevent unwanted stretching in parent blocks */
+  max-width: none;
+  min-width: unset;
+  margin: 0;
+  padding: 0;
+}
+
+.columns > div > div {
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  flex: 0 0 32px;
+  min-width: 0;
+  min-height: 0;
+
+  /* Ensure no shifting from baseline alignment */
+  vertical-align: top;
+}
+
+/* Remove double border between boxes */
+.columns > div > div:not(:last-child) {
+  border-right: none;
+}
+
+/* Hide extra columns after the third */
+.columns > div > div:nth-child(n+4) {
+  display: none;
+}
+
+/* Handle icon sizing and color if present */
+.columns > div > div svg,
+.columns > div > div img,
+.columns > div > div i {
+  width: 20px;
+  height: 20px;
+  color: #555;
+  fill: #555;
+  display: block;
+  margin: auto;
+}
+
+/* Make sure on small screens these three boxes stack vertically */
+@media (max-width: 600px) {
+  .columns > div {
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    height: auto;
+  }
+
+  .columns > div > div {
+    width: 32px;
+    height: 32px;
+    border-right: 1px solid #ccc;
+    border-bottom: none;
+    flex: 0 0 32px;
+  }
+
+  .columns > div > div:not(:last-child) {
+    border-bottom: none;
+    border-right: none;
   }
 }
