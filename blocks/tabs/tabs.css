@@ -1,3 +1,5 @@
+/* stylelint-disable no-descending-specificity */
+
 .tabs .tabs-list {
   display: flex;
   gap: 0.5ch;
@@ -39,7 +41,6 @@
   margin: 0;
 }
 
-
 .tabs .tabs-list button[aria-selected='true'] {
   border-bottom: 1px solid var(--background-color);
   background-color: var(--background-color);
@@ -55,4 +56,154 @@
 
 .tabs .tabs-panel[aria-hidden='true'] {
   display: none;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  font-family: var(--body-font-family);
+  width: 100%;
+  max-width: 100%;
+}
+
+.tabs > .tabs-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  min-height: 32px;
+  gap: 32px;
+  max-width: 100%;
+  overflow-x: auto;
+  line-height: 1;
+}
+
+.tabs > .tabs-list > .tabs-tab {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: normal;
+  color: #999;
+  cursor: pointer;
+  transition: none;
+  box-shadow: none;
+  line-height: 32px;
+}
+
+.tabs > .tabs-list > .tabs-tab .button-container {
+  margin: 0;
+  padding: 0;
+}
+
+.tabs > .tabs-list > .tabs-tab .button {
+  background: none;
+  border: none;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: normal;
+  color: #999;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  min-height: 32px;
+  line-height: 32px;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline;
+  text-align: left;
+}
+
+/* All tabs except first: gray and normal weight */
+.tabs > .tabs-list > .tabs-tab:not(:first-child) .button {
+  color: #999;
+  font-weight: normal;
+}
+
+/* Remove any highlight from selected tab (except first-child) */
+.tabs > .tabs-list > .tabs-tab[aria-selected="true"]:not(:first-child) .button,
+.tabs > .tabs-list > .tabs-tab:focus:not(:first-child) .button {
+  color: #999;
+  font-weight: normal;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Highlight only the first tab as pink and bold, always wins */
+.tabs > .tabs-list > .tabs-tab:first-child .button {
+  color: #e6007a;
+  font-weight: bold;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Remove underline on active/focus tabs */
+.tabs > .tabs-list > .tabs-tab .button:focus,
+.tabs > .tabs-list > .tabs-tab .button:active {
+  text-decoration: none;
+}
+
+.tabs > .tabs-panel {
+  display: none;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--text-color);
+}
+
+.tabs > .tabs-panel[aria-hidden="false"] {
+  display: block;
+  margin-top: 16px;
+}
+
+.tabs > .tabs-panel ul {
+  margin-left: 0;
+  padding-left: 2px;
+}
+
+.tabs > .tabs-panel li {
+  font-size: 13px;
+  color: var(--text-color);
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.tabs > .tabs-panel a {
+  color: var(--text-color);
+  font-size: 13px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+@media (width <= 600px) {
+  .tabs > .tabs-list {
+    gap: 16px;
+  }
 }
