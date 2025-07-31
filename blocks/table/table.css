@@ -63,85 +63,6 @@
   border: 1px solid;
 }
 
-.table.table5 {
-  background: #fff;
-  padding: 0;
-  border: none;
-}
-
-.table.table5 table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  background: #fff;
-}
-
-.table.table5 thead {
-  background: #fff;
-}
-
-.table.table5 thead tr {
-  background: #fff;
-}
-
-.table.table5 th,
-.table.table5 td {
-  border: none;
-  background: #fff;
-  padding: 20px 48px 18px;
-  min-height: 48px;
-  box-sizing: border-box;
-}
-
-.table.table5 th {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  color: #1d1d1f;
-  text-align: center;
-  vertical-align: middle;
-  white-space: nowrap;
-  position: relative;
-  line-height: 1.3;
-  letter-spacing: 0;
-}
-
-.table.table5 th p {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1px;
-  margin: 0;
-  padding: 0;
-  font-size: inherit;
-  font-weight: inherit;
-  color: inherit;
-  background: transparent;
-  white-space: nowrap;
-  line-height: inherit;
-}
-
-.table.table5 th p::after {
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  margin-left: 1px;
-  background: url("data:image/svg+xml,%3Csvg width='7' height='5' viewBox='0 0 7 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l2.5 3L6 1' stroke='%230071e3' stroke-width='1.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center/contain;
-  vertical-align: middle;
-  position: relative;
-  top: 1px;
-  content: "";
-}
-
-@media (width <= 900px) {
-  .table.table5 th,
-  .table.table5 td {
-    padding: 12px;
-    min-height: 36px;
-    font-size: 13px;
-  }
-}
-
 
 .table.table9 {
   background: #fff;
@@ -174,8 +95,6 @@
   line-height: 1.52;
   box-sizing: border-box;
 }
-
-/* Headline number in header */
 .table.table9 th p:first-child {
   font-size: 2.25rem;
   font-weight: 700;
@@ -184,8 +103,6 @@
   line-height: 1.08;
   letter-spacing: -0.01em;
 }
-
-/* Secondary header text */
 .table.table9 th p:not(:first-child) {
   font-size: 1.07rem;
   color: #a2a2a7;
@@ -193,39 +110,29 @@
   line-height: 1.36;
   margin: 0.19em 0 0 0;
 }
-
-/* Default cell text */
 .table.table9 td p {
   margin: 0.10em 0;
   font-size: 1.08rem;
   color: #1d1d1f;
   line-height: 1.48;
 }
-
-/* Stacked paragraphs vertical rhythm */
 .table.table9 td p + p {
   margin-top: 0.33em;
   color: #86868B;
   font-size: 1.06rem;
 }
-
-/* Feature title font weight and size in body cells */
 .table.table9 td p:first-child {
   font-weight: 700;
   font-size: 1.12rem;
   color: #1d1d1f;
   letter-spacing: -0.01em;
 }
-
-/* Secondary/gray text for supporting info in all rows (not first p) */
 .table.table9 th p:not(:first-child),
 .table.table9 td p:not(:first-child) {
   color: #bdbdc2;
   font-size: 1.06rem;
   font-weight: 400;
 }
-
-/* Not Applicable - lighter and italic (try to catch both first and inner p's) */
 .table.table9 th p,
 .table.table9 td p {
   font-style: normal;
@@ -238,46 +145,32 @@
 }
 .table.table9 th p,
 .table.table9 td p {
-  /* fallback: normal, enhanced below */
 }
 .table.table9 th p,
 .table.table9 td p {
-  /* fallback, below for Not Applicable & dash rules */
 }
 .table.table9 th p,
 .table.table9 td p {
-  /* fallback, below for Not Applicable & dash rules */
 }
 .table.table9 th p,
 .table.table9 td p {
-  /* fallback */
-}
-/* Best-effort for dashes/Not Applicable if they're alone in the p */
-.table.table9 th p,
-.table.table9 td p {
-  /* fallback */
 }
 .table.table9 th p,
 .table.table9 td p {
-  /* fallback for Not Applicable and dashes */
 }
-
-/* If you can use :has/text selectors, use this block (for modern browsers): */
+.table.table9 th p,
+.table.table9 td p {
+}
 @supports ((selector(:has(*))) or (selector(:nth-child(1)))) {
   .table.table9 th p,
   .table.table9 td p {
-    /* fallback, below for Not Applicable & dash rules */
   }
 }
-
-/* If a cell's text is gray and italic (manually for Not Applicable/dash) */
 .table.table9 th p,
 .table.table9 td p {
-  /* fallback, really should be a pale, italic, normal-weight */
 }
 .table.table9 th p,
 .table.table9 td p {
-  /* fallback, can't do text-content match in pure CSS, so ensure regular Not Applicable lines are not bold */
 }
 .table.table9 th p[style*="italic"],
 .table.table9 td p[style*="italic"],
@@ -287,8 +180,6 @@
   font-style: italic;
   font-weight: 400;
 }
-
-/* Subtle horizontal divider for hr lines in cells */
 .table.table9 td hr {
   border: none;
   border-top: 1px solid #f3f3f5;
@@ -296,8 +187,6 @@
   margin: 0.95em 0 0.8em 0;
   height: 0;
 }
-
-/* Remove all grid-like borders */
 .table.table9 table thead tr,
 .table.table9 table tbody tr,
 .table.table9.no-header table tbody tr,
@@ -305,8 +194,6 @@
 .table.table9.bordered table td {
   border: none;
 }
-
-/* Use grid for table rows for multi-row/column alignment, only on desktop */
 @media (min-width: 900px) {
   .table.table9 tbody tr {
     display: grid;
@@ -318,8 +205,6 @@
     grid-template-columns: repeat(5, 1fr);
   }
 }
-
-/* Responsive: horizontal scroll for small screens, table layout for desktop */
 @media (max-width: 900px) {
   .table.table9 {
     overflow-x: auto;
@@ -334,11 +219,120 @@
     padding: 13px 8px;
   }
 }
-
-/* Table centering and max width */
 @media (min-width: 1200px) {
   .table.table9 table {
     max-width: 1200px;
     margin: 0 auto;
   }
+}
+
+
+.table.table5 {
+  background: #fff;
+  padding: 0;
+  border: none;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Remove all borders and background from all table elements */
+.table.table5 table,
+.table.table5 thead,
+.table.table5 tbody,
+.table.table5 tr,
+.table.table5 th,
+.table.table5 td {
+  border: none;
+  background: #fff;
+  box-shadow: none;
+}
+
+/* Natural, content-hugging table layout */
+.table.table5 table {
+  width: auto;
+  max-width: 100%;
+  table-layout: auto;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* Header row height for comfortable vertical space */
+.table.table5 thead tr {
+  height: 32px;
+  min-height: 0;
+}
+
+/* Compact header cells with readable font and modest horizontal padding */
+.table.table5 th {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1d1d1f;
+  white-space: nowrap;
+  padding: 2px 12px;
+  height: 32px;
+  min-width: 0;
+  min-height: 0;
+  line-height: 1.2;
+  letter-spacing: 0;
+  box-sizing: border-box;
+  vertical-align: middle;
+  background: #fff;
+  border: none;
+  text-align: center;
+}
+
+/* Chevron-aligned text using flex */
+.table.table5 th p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background: transparent;
+  white-space: nowrap;
+  line-height: inherit;
+  gap: 0;
+}
+
+/* Chevron styling, compact and visually centered */
+.table.table5 th p::after {
+  display: inline-block;
+  width: 8px;
+  height: 5px;
+  margin-left: 2.5px;
+  background: url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l3 3 3-3' stroke='%230071e3' stroke-width='1.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center/contain;
+  vertical-align: middle;
+  position: relative;
+  top: 1px;
+}
+
+/* Responsive: shrink padding and font on small screens */
+@media (max-width: 700px) {
+  .table.table5 th {
+    font-size: 12px;
+    padding: 2px 6px;
+    height: 26px;
+  }
+  .table.table5 th p::after {
+    width: 7px;
+    height: 4px;
+    margin-left: 1.5px;
+  }
+}
+
+/* Remove any row or cell borders on hover/focus, too */
+.table.table5 th:focus,
+.table.table5 th:hover,
+.table.table5 tr:focus,
+.table.table5 tr:hover {
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
