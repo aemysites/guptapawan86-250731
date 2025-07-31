@@ -1,3 +1,4 @@
+/* Disable the no-descending-specificity rule globally for the file */
 /* stylelint-disable no-descending-specificity */
 
 .tabs .tabs-list {
@@ -131,13 +132,11 @@
   text-align: left;
 }
 
-/* All tabs except first: gray and normal weight */
 .tabs > .tabs-list > .tabs-tab:not(:first-child) .button {
   color: #999;
   font-weight: normal;
 }
 
-/* Remove any highlight from selected tab (except first-child) */
 .tabs > .tabs-list > .tabs-tab[aria-selected="true"]:not(:first-child) .button,
 .tabs > .tabs-list > .tabs-tab:focus:not(:first-child) .button {
   color: #999;
@@ -148,7 +147,6 @@
   box-shadow: none;
 }
 
-/* Highlight only the first tab as pink and bold, always wins */
 .tabs > .tabs-list > .tabs-tab:first-child .button {
   color: #e6007a;
   font-weight: bold;
@@ -158,7 +156,6 @@
   box-shadow: none;
 }
 
-/* Remove underline on active/focus tabs */
 .tabs > .tabs-list > .tabs-tab .button:focus,
 .tabs > .tabs-list > .tabs-tab .button:active {
   text-decoration: none;
@@ -206,4 +203,115 @@
   .tabs > .tabs-list {
     gap: 16px;
   }
+}
+
+.tabs,
+.tabs > .tabs-wrapper,
+.tabs > .tabs-wrapper > .tabs.block,
+.tabs .tabs-list {
+  margin: 0;
+  padding: 0;
+}
+
+.tabs .tabs-list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min-content;
+  align-items: center;
+  justify-content: start;
+  gap: 24px;
+  background: #fff;
+  height: 28px;
+  min-height: 28px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  width: 100%;
+  box-shadow: none;
+  overflow-x: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.tabs .tabs-list .tabs-tab {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  color: #999;
+  cursor: pointer;
+  box-shadow: none;
+  height: 28px;
+  line-height: 28px;
+}
+
+.tabs .tabs-list .tabs-tab .button-container {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.tabs .tabs-list .tabs-tab .button {
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  color: #999;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  min-height: 0;
+  line-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.tabs .tabs-list .tabs-tab:first-child .button {
+  color: #e70087;
+  font-weight: 600;
+}
+
+.tabs .tabs-list .tabs-tab .button:focus,
+.tabs .tabs-list .tabs-tab .button:active,
+.tabs .tabs-list .tabs-tab .button:hover {
+  text-decoration: none;
+  color: #e70087;
+}
+
+.tabs .tabs-list .tabs-tab:not(:first-child) .button,
+.tabs .tabs-list .tabs-tab[aria-selected="true"]:not(:first-child) .button {
+  color: #999;
+  font-weight: 400;
+}
+
+.tabs .tabs-panel {
+  display: none;
+}
+
+@media (width <= 600px) {
+  .tabs .tabs-list {
+    gap: 16px;
+  }
+}
+
+.tabs {
+  margin-top: 0;
+  padding-top: 0;
 }
