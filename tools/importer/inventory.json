@@ -1,0 +1,297 @@
+{
+  "fragments": [
+    {
+      "name": "nav",
+      "path": "/nav",
+      "totalBoxes": 1,
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+          "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+          "uuid": "a35c60b2-00-4a0573ab956a45c4a6945d7110b8ac8f62490d1a",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[1]/div[1]"
+        }
+      ],
+      "styles": {
+        "height": 79
+      }
+    },
+    {
+      "name": "footer",
+      "path": "/footer",
+      "totalBoxes": 1,
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+          "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+          "uuid": "a35c60b2-19-4e40876b070a280728f2ee54c6a20542042e3f79",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[6]/footer[1]/div[1]/div[1]/nav[3]"
+        }
+      ],
+      "styles": {}
+    }
+  ],
+  "blocks": [
+    {
+      "name": "header",
+      "cluster": 1,
+      "source": "Header",
+      "target": "Header",
+      "key": "header1",
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+          "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+          "uuid": "a35c60b2-00-4a0573ab956a45c4a6945d7110b8ac8f62490d1a",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Tabs",
+      "cluster": 2,
+      "source": "Tabs",
+      "target": "Tabs",
+      "key": "tabs2",
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+          "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+          "uuid": "a35c60b2-01-af42ea4eaa1bdae1389e358aa031766f3be6e5c9",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 3,
+      "source": "Hero",
+      "target": "Hero (hero3)",
+      "key": "hero3",
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+          "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+          "uuid": "a35c60b2-02-daf52f9d43a1b4f2b199ceddaf3ffaa6f295befe",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+          "section": "section-1"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 4,
+      "source": "Cards",
+      "target": "Cards (cards4)",
+      "key": "cards4",
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+          "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+          "uuid": "a35c60b2-03-cbcadb5bd37d93f67591753cb101a9ce426dc5d5",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Table",
+      "cluster": 5,
+      "source": "Table",
+      "target": "Table (table5)",
+      "key": "table5",
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+          "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+          "uuid": "a35c60b2-05-2df1888cfd593bab77094c6aba5823f9fd23ee89",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 6,
+      "source": "Columns",
+      "target": "Columns (columns6)",
+      "key": "columns6",
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+          "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+          "uuid": "a35c60b2-06-0d093ecebf7d517b1265dcba7d2caf5a9f9f40cb",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 7,
+      "source": "Columns",
+      "target": "Columns (columns7)",
+      "key": "columns7",
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+          "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+          "uuid": "a35c60b2-07-3c21601607afc6ab12cda44a631114a896f03949",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 8,
+      "source": "Columns",
+      "target": "Columns (columns8)",
+      "key": "columns8",
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+          "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+          "uuid": "a35c60b2-08-dfb4cdaacbe389e691e3e11e348cc92c2346cfa1",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]"
+        }
+      ]
+    },
+    {
+      "name": "Table",
+      "cluster": 9,
+      "source": "Table",
+      "target": "Table (table9)",
+      "key": "table9",
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+          "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+          "uuid": "a35c60b2-09-3dbb1c12bfd05ffcbd52423a9c9364657b934df8",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 10,
+      "source": "Cards",
+      "target": "Cards (cards10)",
+      "key": "cards10",
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+          "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+          "uuid": "a35c60b2-11-f113b4a136e5d8470fe664127c1edc76eb8085e5",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 11,
+      "source": "Columns",
+      "target": "Columns (columns11)",
+      "key": "columns11",
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+          "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+          "uuid": "a35c60b2-13-9baaed26d3388f6e593602a5c6f30a109e763434",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 12,
+      "source": "Hero",
+      "target": "Hero (hero12)",
+      "key": "hero12",
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+          "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+          "uuid": "a35c60b2-15-5c8abba669fda30cbab2b630a51c2b51841731bc",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[6]/div[1]/div[2]",
+          "section": "section-3"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 13,
+      "source": "Columns",
+      "target": "Columns (columns13)",
+      "key": "columns13",
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+          "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+          "uuid": "a35c60b2-17-dfdffc40659f4ad74694758ec6cc634df91d91c9",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[6]/footer[1]/div[1]/div[1]/nav[1]/div[4]/ul[1]/li[11]"
+        }
+      ]
+    }
+  ],
+  "outliers": [
+    {
+      "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+      "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+      "uuid": "a35c60b2-04-372a02f70da3cf123fa8bd927a3d1efea3a1a1d1",
+      "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]"
+    },
+    {
+      "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+      "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+      "uuid": "a35c60b2-10-06cef65eb50f2789ff133b3a060ad4ad68e28e7e",
+      "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]"
+    },
+    {
+      "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+      "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+      "uuid": "a35c60b2-12-d44c5f3adb5d9b49c9988547b5d49eaee56cb595",
+      "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]"
+    },
+    {
+      "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+      "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+      "uuid": "a35c60b2-14-22cd917a30c2aebe1c92aeca6a568d81fdb4b750",
+      "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[6]/div[1]/div[1]",
+      "section": "section-3"
+    },
+    {
+      "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+      "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+      "uuid": "a35c60b2-16-dc0fd5d774ce18192e599aab8c13fc46192e0987",
+      "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]/div[7]",
+      "section": "section-3"
+    },
+    {
+      "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+      "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+      "uuid": "a35c60b2-18-139a70e94ba03cf831cc1f4df038473c65385cf1",
+      "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[6]/footer[1]/div[1]/div[1]/nav[2]"
+    },
+    {
+      "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+      "urlHash": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa",
+      "uuid": "a35c60b2-19-4e40876b070a280728f2ee54c6a20542042e3f79",
+      "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[6]/footer[1]/div[1]/div[1]/nav[3]"
+    }
+  ],
+  "sections": [
+    {
+      "name": "section-1",
+      "background": "rgb(0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 1
+    },
+    {
+      "name": "section-2",
+      "background": "rgb(29, 29, 31) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 1
+    },
+    {
+      "name": "section-3",
+      "background": "rgb(245, 245, 247) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 3
+    }
+  ]
+}
