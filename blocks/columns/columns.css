@@ -1,9 +1,18 @@
-/* Disable no-descending-specificity rule globally */
+/* Disable no-descending-specificity globally */
 /* stylelint-disable no-descending-specificity */
 
 .columns > div {
   display: flex;
   flex-direction: column;
+  gap: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: 32px;
+  max-width: none;
+  min-width: unset;
+  margin: 0;
+  padding: 0;
 }
 
 .columns img {
@@ -12,6 +21,23 @@
 
 .columns > div > div {
   order: 1;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  flex: 0 0 32px;
+  min-width: 0;
+  min-height: 0;
+  vertical-align: top;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .columns > div > .columns-img-col {
@@ -20,6 +46,25 @@
 
 .columns > div > .columns-img-col img {
   display: block;
+}
+
+.columns > div > div:not(:last-child) {
+  border-right: none;
+}
+
+.columns > div > div:nth-child(n+4) {
+  display: none;
+}
+
+.columns > div > div svg,
+.columns > div > div img,
+.columns > div > div i {
+  width: 20px;
+  height: 20px;
+  color: #555;
+  fill: #555;
+  display: block;
+  margin: auto;
 }
 
 @media (width >= 900px) {
@@ -88,27 +133,18 @@
 .columns.columns7 > div > div:nth-child(1)::before,
 .columns.columns7 > div > div:nth-child(2)::before {
   background: #bdae9c;
-  box-shadow:
-    22px 0 0 0 #c7c3b7, /* Natural */
-    44px 0 0 0 #edece7, /* White */
-    66px 0 0 0 #585a56;
+  box-shadow: 22px 0 0 0 #c7c3b7, 44px 0 0 0 #edece7, 66px 0 0 0 #585a56;
 }
 
 .columns.columns7 > div > div:nth-child(3)::before,
 .columns.columns7 > div > div:nth-child(4)::before {
   background: #4086de;
-  box-shadow:
-    22px 0 0 0 #7bddde,  /* Teal */
-    44px 0 0 0 #ffc6dc,  /* Pink */
-    66px 0 0 0 #edece7,  /* White */
-    88px 0 0 0 #252525;
+  box-shadow: 22px 0 0 0 #7bddde, 44px 0 0 0 #ffc6dc, 66px 0 0 0 #edece7, 88px 0 0 0 #252525;
 }
 
 .columns.columns7 > div > div:nth-child(5)::before {
   background: #252525;
-  box-shadow:
-    22px 0 0 0 #edece7, /* Starlight */
-    44px 0 0 0 #e10600;
+  box-shadow: 22px 0 0 0 #edece7, 44px 0 0 0 #e10600;
 }
 
 .columns.columns7 > div > div > p {
@@ -214,138 +250,76 @@
   }
 }
 
-.columns > div {
-  display: flex;
-  flex-direction: row;
-  gap: 0;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: auto;
-  height: 32px;
-  max-width: none;
-  min-width: unset;
-  margin: 0;
-  padding: 0;
-}
-
-.columns > div > div {
-  box-sizing: border-box;
-  width: 32px;
-  height: 32px;
-  background: #fff;
-  border: 1px solid #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  flex: 0 0 32px;
-  min-width: 0;
-  min-height: 0;
-  vertical-align: top;
-}
-
-.columns > div > div:not(:last-child) {
-  border-right: none;
-}
-
-.columns > div > div:nth-child(n+4) {
-  display: none;
-}
-
-.columns > div > div svg,
-.columns > div > div img,
-.columns > div > div i {
-  width: 20px;
-  height: 20px;
-  color: #555;
-  fill: #555;
-  display: block;
-  margin: auto;
-}
-
-@media (width <= 600px) {
-  .columns > div {
-    flex-direction: column;
-    align-items: flex-start;
-    width: auto;
-    height: auto;
-  }
-
-  .columns > div > div {
-    width: 32px;
-    height: 32px;
-    border-right: 1px solid #ccc;
-    border-bottom: none;
-    flex: 0 0 32px;
-  }
-
-  .columns > div > div:not(:last-child) {
-    border-bottom: none;
-    border-right: none;
-  }
-}
-
-
 .columns.columns6 > div {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
   align-items: flex-end;
+  justify-content: flex-start;
   gap: 24px;
   width: 100%;
-  padding: 0;
-  margin: 0;
   background: none;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  min-height: 180px; /* Ensures columns have height even if empty */
+  min-height: 180px;
 }
 
 .columns.columns6 > div > div {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  background: none;
-  border: none;
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  min-width: 60px;
-  min-height: 160px;
-
-  /* Temporary debug background for visibility without images.
-     Remove or comment out when images are present. */
-  background-color: #fafbfc;
-  border-radius: 8px;
-  transition: background 0.3s;
+  background: #f5f6f7;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px 0 rgb(20 20 20 / 3%);
+  min-width: 64px;
+  min-height: 180px;
+  max-width: 120px;
+  flex: 1 1 0px;
+  transition: background 0.24s;
 }
 
-.columns.columns6 > div > div:hover {
-  background-color: #f0f0f0;
+.columns.columns6 > div > div:nth-child(1),
+.columns.columns6 > div > div:nth-child(2) {
+  min-width: 90px;
+  max-width: 120px;
 }
 
-/* If/when images are present, ensure they scale and align as expected */
-.columns.columns6 img {
-  display: block;
-  max-height: 180px;
-  height: auto;
-  width: auto;
-  margin: 0 auto;
-  object-fit: contain;
-  border-radius: 0;
+.columns.columns6 > div > div:nth-child(3),
+.columns.columns6 > div > div:nth-child(4) {
+  min-width: 70px;
+  max-width: 100px;
 }
 
-/* Responsive: stack columns vertically on smaller screens */
+.columns.columns6 > div > div:nth-child(5) {
+  min-width: 56px;
+  max-width: 72px;
+}
+
 @media (width <= 900px) {
   .columns.columns6 > div {
     flex-direction: column;
     align-items: stretch;
-    gap: 24px;
     min-height: 0;
+    gap: 18px;
   }
 
   .columns.columns6 > div > div {
-    min-width: 0;
     min-height: 120px;
+    max-width: 100%;
+    min-width: 0;
   }
+}
+
+.columns.columns6 img {
+  display: block;
+  max-height: 180px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
 }
