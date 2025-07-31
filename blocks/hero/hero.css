@@ -1,4 +1,3 @@
-/* Disable no-descending-specificity globally */
 /* stylelint-disable no-descending-specificity */
 
 .hero-container .hero-wrapper {
@@ -62,7 +61,6 @@
   overflow: hidden;
 }
 
-/* Main hero content: vertical stacking */
 .hero.hero3 > div {
   width: 100%;
   display: flex;
@@ -76,7 +74,6 @@
   padding-bottom: 5vh;
 }
 
-/* "PRO" BG - behind everything, centralized */
 .hero.hero3 > div:first-child {
   position: absolute;
   top: 52%;
@@ -102,7 +99,6 @@
   filter: drop-shadow(0 0 60px #fff8) drop-shadow(0 0 180px #ffb80085);
 }
 
-/* Inline layout for buttons, vertical stacking for everything else */
 .hero.hero3 > div:last-child > div {
   width: 100%;
   display: flex;
@@ -117,7 +113,6 @@
   text-align: center;
 }
 
-/* Logo (first p child) */
 .hero.hero3 > div:last-child > div > p:nth-child(1) {
   margin-top: 0;
   margin-bottom: 18px;
@@ -132,7 +127,6 @@
   object-fit: contain;
 }
 
-/* Headline (second p child) */
 .hero.hero3 > div:last-child > div > p:nth-child(2) {
   margin-bottom: 32px;
 }
@@ -148,7 +142,6 @@
   filter: drop-shadow(0 0 24px #fff) drop-shadow(0 0 80px #ffb800b2);
 }
 
-/* Phone (third p child) placed above PRO, overlaps with less margin and centered */
 .hero.hero3 > div:last-child > div > p:nth-child(3) {
   margin-bottom: 34px;
   position: relative;
@@ -170,7 +163,6 @@
   filter: drop-shadow(0 12px 80px #d7a55e44);
 }
 
-/* Supporting text (fourth p child) */
 .hero.hero3 > div:last-child > div > p:nth-child(4) {
   color: #fff;
   font-size: 1.16rem;
@@ -182,7 +174,6 @@
   max-width: 700px;
 }
 
-/* Button row: use flex row for buttons only, centered under text */
 .hero.hero3 > div:last-child > div > .button-container {
   display: inline-flex;
   margin: 0;
@@ -232,12 +223,10 @@
   box-shadow: 0 4px 32px #ffd70025;
 }
 
-/* Button containers in a flex row container below supporting text */
 .hero.hero3 > div:last-child > div .button-container {
   margin-bottom: 0;
 }
 
-/* At desktop+ widths, arrange buttons in a row; on mobile stack vertically */
 @media (width >= 700px) {
   .hero.hero3 > div:last-child > div {
     flex-direction: column;
@@ -277,7 +266,180 @@
   }
 }
 
-/* Prevent horizontal scroll from full-bleed hero */
 body {
   overflow-x: hidden;
 }
+
+
+.hero.hero12 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px 0 rgb(60 60 60 / 7%);
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  min-height: 260px;
+  gap: 28px; /* Tighter gap for better balance */
+}
+
+/* IMAGE COLUMN - right side */
+.hero.hero12 > div:first-child {
+  flex: 0 0 250px; /* Slightly wider for a larger image */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center image better */
+  order: 2;
+  min-width: 0;
+  min-height: 198px;
+  padding-right: 0;
+}
+
+.hero.hero12 > div:first-child > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero.hero12 picture,
+.hero.hero12 img {
+  display: block;
+  width: 238px;
+  max-width: 100%;
+  height: 198px;
+  object-fit: contain;
+  margin: 0;
+  background: none;
+  box-shadow: none;
+  position: static;
+  z-index: auto;
+  padding: 0;
+}
+
+/* TEXT COLUMN - left side */
+.hero.hero12 > div:last-child {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  max-width: 320px; /* Slightly narrower for balance */
+  order: 1;
+}
+
+.hero.hero12 > div:last-child > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+/* Typography adjustments */
+.hero.hero12 h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin: 0 0 8px;
+  letter-spacing: 0.01em;
+  font-family: var(--heading-font-family);
+}
+
+.hero.hero12 p {
+  margin: 0 0 12px;
+  color: #1d1d1f;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.15;
+  font-family: var(--body-font-family);
+}
+
+.hero.hero12 p:nth-of-type(2) {
+  font-size: 15px;
+  color: #6e6e73;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.hero.hero12 .button-container {
+  margin-top: 8px;
+}
+
+.hero.hero12 .button-container .button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  color: #06c;
+  font-weight: 400;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: left;
+  min-width: 0;
+  margin: 0;
+  line-height: 1.3;
+  display: inline;
+}
+
+.hero.hero12 .button-container .button:hover,
+.hero.hero12 .button-container .button:focus {
+  color: #06c;
+  text-decoration: underline;
+  background: none;
+}
+
+/* Remove any absolute, overlay, or collapse from image if pre-existing */
+.hero.hero12 picture {
+  position: static;
+  inset: unset;
+  z-index: unset;
+}
+
+/* Responsive adjustments */
+@media (width <= 800px) {
+  .hero.hero12 {
+    flex-direction: column;
+    max-width: 98vw;
+    padding: 20px 8px;
+    gap: 18px;
+    min-height: unset;
+  }
+
+  .hero.hero12 > div:first-child,
+  .hero.hero12 > div:last-child {
+    order: unset;
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+  }
+
+  .hero.hero12 > div:first-child > div {
+    justify-content: center;
+  }
+
+  .hero.hero12 picture,
+  .hero.hero12 img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 10px;
+  }
+
+  .hero.hero12 h3,
+  .hero.hero12 p {
+    text-align: center;
+  }
+
+  .hero.hero12 .button-container {
+    text-align: center;
+  }
+
+  .hero.hero12 > div:last-child {
+    max-width: none;
+  }
+}
+
