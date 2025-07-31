@@ -1,3 +1,4 @@
+/* Disable no-descending-specificity rule globally */
 /* stylelint-disable no-descending-specificity */
 
 .hero-container .hero-wrapper {
@@ -48,228 +49,9 @@
   }
 }
 
-.hero.hero3 {
-  position: relative;
-  width: 100vw;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  background: radial-gradient(ellipse at center, #1a0d05 0%, #000 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.hero.hero3 > div {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 2;
-  min-height: 80vh;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-}
-
-.hero.hero3 > div:first-child {
-  position: absolute;
-  top: 52%;
-  left: 50%;
-  width: 65vw;
-  max-width: 1000px;
-  min-width: 320px;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.85;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero.hero3 > div:first-child picture,
-.hero.hero3 > div:first-child img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  filter: drop-shadow(0 0 60px #fff8) drop-shadow(0 0 180px #ffb80085);
-}
-
-.hero.hero3 > div:last-child > div {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-}
-
-.hero.hero3 > div:last-child > div > p {
-  margin: 0 0 22px;
-  text-align: center;
-}
-
-.hero.hero3 > div:last-child > div > p:nth-child(1) {
-  margin-top: 0;
-  margin-bottom: 18px;
-}
-
-.hero.hero3 > div:last-child > div > p:nth-child(1) picture,
-.hero.hero3 > div:last-child > div > p:nth-child(1) img {
-  width: 120px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  object-fit: contain;
-}
-
-.hero.hero3 > div:last-child > div > p:nth-child(2) {
-  margin-bottom: 32px;
-}
-
-.hero.hero3 > div:last-child > div > p:nth-child(2) picture,
-.hero.hero3 > div:last-child > div > p:nth-child(2) img {
-  width: 420px;
-  max-width: 94vw;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  object-fit: contain;
-  filter: drop-shadow(0 0 24px #fff) drop-shadow(0 0 80px #ffb800b2);
-}
-
-.hero.hero3 > div:last-child > div > p:nth-child(3) {
-  margin-bottom: 34px;
-  position: relative;
-  z-index: 2;
-  width: 540px;
-  max-width: 93vw;
-  display: flex;
-  justify-content: center;
-}
-
-.hero.hero3 > div:last-child > div > p:nth-child(3) picture,
-.hero.hero3 > div:last-child > div > p:nth-child(3) img {
-  width: 540px;
-  max-width: 93vw;
-  height: auto;
-  margin: 0 auto;
-  object-fit: contain;
-  display: block;
-  filter: drop-shadow(0 12px 80px #d7a55e44);
-}
-
-.hero.hero3 > div:last-child > div > p:nth-child(4) {
-  color: #fff;
-  font-size: 1.16rem;
-  font-weight: 400;
-  margin-bottom: 36px;
-  letter-spacing: 0.01em;
-  text-align: center;
-  text-shadow: 0 2px 20px #000a;
-  max-width: 700px;
-}
-
-.hero.hero3 > div:last-child > div > .button-container {
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  vertical-align: middle;
-}
-
-.hero.hero3 > div:last-child > div > .button-container + .button-container {
-  margin-left: 18px;
-}
-
-.hero.hero3 > div:last-child > div > .button-container .button {
-  display: inline-block;
-  border-radius: 999px;
-  padding: 0.85em 2.8em;
-  font-size: 1.13rem;
-  font-weight: 500;
-  margin: 0 2px;
-  box-shadow: 0 2px 18px 0 #0002;
-  transition: box-shadow 0.18s, background 0.12s;
-  background: #000;
-  color: #fff;
-  border: 1.5px solid #fff;
-  letter-spacing: 0.01em;
-  text-align: center;
-  line-height: 1.2;
-}
-
-.hero.hero3 .button-container:last-of-type .button {
-  background: #fff;
-  color: #000;
-  border: 1.5px solid #222;
-}
-
-.hero.hero3 .button-container .button:hover,
-.hero.hero3 .button-container .button:focus {
-  box-shadow: 0 4px 32px #ffd70055;
-  background: #222;
-  color: #fff;
-  outline: none;
-}
-
-.hero.hero3 .button-container:last-of-type .button:hover,
-.hero.hero3 .button-container:last-of-type .button:focus {
-  background: #f4f4f4;
-  color: #000;
-  box-shadow: 0 4px 32px #ffd70025;
-}
-
-.hero.hero3 > div:last-child > div .button-container {
-  margin-bottom: 0;
-}
-
-@media (width >= 700px) {
-  .hero.hero3 > div:last-child > div {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero.hero3 > div:last-child > div > .button-container {
-    display: inline-flex;
-    margin-top: 0;
-  }
-
-  .hero.hero3 > div:last-child > div > .button-container + .button-container {
-    margin-left: 18px;
-  }
-}
-
-@media (width <= 699px) {
-  .hero.hero3 > div:last-child > div > .button-container {
-    display: block;
-    margin: 0 0 14px;
-  }
-
-  .hero.hero3 > div:last-child > div > .button-container + .button-container {
-    margin-left: 0;
-  }
-
-  .hero.hero3 > div:last-child > div {
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-  }
-
-  .hero.hero3 > div:last-child > div > .button-container .button {
-    width: 88vw;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
 body {
   overflow-x: hidden;
 }
-
 
 .hero.hero12 {
   display: flex;
@@ -283,15 +65,14 @@ body {
   margin: 40px auto;
   padding: 32px 24px;
   min-height: 260px;
-  gap: 28px; /* Tighter gap for better balance */
+  gap: 28px;
 }
 
-/* IMAGE COLUMN - right side */
 .hero.hero12 > div:first-child {
-  flex: 0 0 250px; /* Slightly wider for a larger image */
+  flex: 0 0 250px;
   display: flex;
   align-items: center;
-  justify-content: center; /* Center image better */
+  justify-content: center;
   order: 2;
   min-width: 0;
   min-height: 198px;
@@ -320,14 +101,13 @@ body {
   padding: 0;
 }
 
-/* TEXT COLUMN - left side */
 .hero.hero12 > div:last-child {
   flex: 1 1 0%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-width: 0;
-  max-width: 320px; /* Slightly narrower for balance */
+  max-width: 320px;
   order: 1;
 }
 
@@ -338,7 +118,6 @@ body {
   min-width: 0;
 }
 
-/* Typography adjustments */
 .hero.hero12 h3 {
   font-size: 15px;
   font-weight: 700;
@@ -392,14 +171,12 @@ body {
   background: none;
 }
 
-/* Remove any absolute, overlay, or collapse from image if pre-existing */
 .hero.hero12 picture {
   position: static;
   inset: unset;
   z-index: unset;
 }
 
-/* Responsive adjustments */
 @media (width <= 800px) {
   .hero.hero12 {
     flex-direction: column;
@@ -443,3 +220,200 @@ body {
   }
 }
 
+.hero.hero3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100vw;
+  background: radial-gradient(ellipse at center, #231103 0%, #000 100%);
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+}
+
+/* Hide the vertical "PRO" image (3rd p in text column) */
+.hero.hero3 > div:last-child > div > p:nth-child(3) {
+  display: none;
+}
+
+/* Stack all text content vertically and center */
+.hero.hero3 > div:last-child > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  padding: 0;
+  margin: 0;
+  z-index: 3;
+}
+
+/* Logo image */
+.hero.hero3 > div:last-child > div > p:nth-child(1) picture,
+.hero.hero3 > div:last-child > div > p:nth-child(1) img {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.5em;
+  opacity: 0.85;
+  filter: drop-shadow(0 2px 4px #fff2);
+}
+
+/* Headline image */
+.hero.hero3 > div:last-child > div > p:nth-child(2) picture,
+.hero.hero3 > div:last-child > div > p:nth-child(2) img {
+  width: 435px;
+  max-width: 90vw;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.8em;
+  object-fit: contain;
+  filter: drop-shadow(0 0 24px #fff6) drop-shadow(0 0 60px #fbc66c77);
+}
+
+/* Supporting text */
+.hero.hero3 > div:last-child > div > p:nth-child(4) {
+  margin: 1.5em 0 1.6em;
+  font-size: 1.10rem;
+  color: #f5f5f7;
+  letter-spacing: 0.01em;
+  text-align: center;
+  text-shadow: 0 2px 20px #000a;
+  max-width: 700px;
+}
+
+/* Hero image (phone) in the center of the stack, below headline and above supporting text/buttons */
+.hero.hero3 > div:first-child {
+  width: 100vw;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 2;
+  pointer-events: none;
+  position: relative;
+  order: 2;
+  margin-top: -1em;
+  margin-bottom: -1em;
+}
+
+/* Only show the phone image (ensure vertical "PRO" img is hidden, see above) */
+.hero.hero3 > div:first-child picture,
+.hero.hero3 > div:first-child img {
+  width: 700px;
+  max-width: 90vw;
+  min-width: 230px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 8px 40px #d2a46c60);
+}
+
+/* Simulated glow shape behind phone image */
+.hero.hero3 > div:first-child::after {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  width: 740px;
+  max-width: 90vw;
+  height: 165px;
+  max-height: 25vw;
+  border-radius: 40% 40% 52% 52%;
+  background: radial-gradient(ellipse at center, #fff9 10%, #ffe3b0 45%, #fff0 95%);
+  opacity: 0.28;
+  filter: blur(16px);
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+  display: block;
+}
+
+/* Button row: horizontally aligned and centered below supporting text */
+.hero.hero3 > div:last-child > div .button-container {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 0 12px 0 0;
+}
+
+.hero.hero3 > div:last-child > div > .button-container + .button-container {
+  margin-left: 18px;
+}
+
+.hero.hero3 > div:last-child > div .button-container .button {
+  display: inline-block;
+  padding: 13px 32px;
+  border-radius: 999px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0;
+  background: #000;
+  color: #fff;
+  box-shadow: 0 2px 10px #0001;
+  transition: background .2s, color .2s;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1.5px solid #fff;
+}
+
+.hero.hero3 > div:last-child > div .button-container:last-of-type .button {
+  background: #fff;
+  color: #000;
+  border: 1.5px solid #222;
+}
+
+.hero.hero3 > div:last-child > div .button-container .button:hover,
+.hero.hero3 > div:last-child > div .button-container .button:focus {
+  background: #ffc16a;
+  color: #222;
+  box-shadow: 0 4px 16px #0002;
+  outline: none;
+}
+
+.hero.hero3 > div:last-child > div .button-container:last-of-type .button:hover,
+.hero.hero3 > div:last-child > div .button-container:last-of-type .button:focus {
+  background: #f4f4f4;
+  color: #000;
+  box-shadow: 0 4px 32px #ffd70025;
+}
+
+/* Responsive: stack buttons vertically on small screens */
+@media (width <= 700px) {
+  .hero.hero3 > div:first-child picture,
+  .hero.hero3 > div:first-child img {
+    width: 98vw;
+    max-width: 98vw;
+  }
+
+  .hero.hero3 > div:first-child::after {
+    width: 96vw;
+    height: 18vw;
+    min-width: 210px;
+    min-height: 38px;
+  }
+}
+
+@media (width <= 599px) {
+  .hero.hero3 > div:last-child > div .button-container {
+    display: block;
+    margin: 0 0 14px;
+  }
+
+  .hero.hero3 > div:last-child > div > .button-container + .button-container {
+    margin-left: 0;
+  }
+}
+
+/* Remove default margins/padding from main containers */
+.hero.hero3 > div:first-child,
+.hero.hero3 > div:last-child {
+  margin: 0;
+  padding: 0;
+}
