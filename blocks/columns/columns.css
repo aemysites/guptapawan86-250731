@@ -1,4 +1,4 @@
-/* Disable no-descending-specificity globally */
+/* Disable no-descending-specificity globally for the file */
 /* stylelint-disable no-descending-specificity */
 
 .columns > div {
@@ -64,7 +64,7 @@
   display: block;
 }
 
-@media (width >= 900px) {
+@media (min-width: 900px) {
   .columns > div {
     align-items: center;
     flex-direction: unset;
@@ -74,109 +74,6 @@
   .columns > div > div {
     flex: 1;
     order: unset;
-  }
-}
-
-.columns.columns7 {
-  background: #fff;
-  padding: 32px 0;
-}
-
-.columns.columns7 > div {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-@media (width >= 600px) {
-  .columns.columns7 > div {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (width >= 900px) {
-  .columns.columns7 > div {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 40px;
-  }
-}
-
-.columns.columns7 > div > div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  min-width: 0;
-  padding: 0 8px;
-  position: relative;
-  padding-top: 28px;
-}
-
-.columns.columns7 > div > div::before {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 0;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #b8ada2;
-  box-shadow: none;
-  display: block;
-}
-
-.columns.columns7 > div > div:nth-child(1)::before,
-.columns.columns7 > div > div:nth-child(2)::before {
-  background: #bdae9c;
-  box-shadow:
-    22px 0 0 0 #c7c3b7, /* Natural */
-    44px 0 0 0 #edece7, /* White */
-    66px 0 0 0 #585a56;
-}
-
-.columns.columns7 > div > div:nth-child(3)::before,
-.columns.columns7 > div > div:nth-child(4)::before {
-  background: #4086de;
-  box-shadow:
-    22px 0 0 0 #7bddde,  /* Teal */
-    44px 0 0 0 #ffc6dc,  /* Pink */
-    66px 0 0 0 #edece7,  /* White */
-    88px 0 0 0 #252525;
-}
-
-.columns.columns7 > div > div:nth-child(5)::before {
-  background: #252525;
-  box-shadow:
-    22px 0 0 0 #edece7, /* Starlight */
-    44px 0 0 0 #e10600;
-}
-
-.columns.columns7 > div > div > p {
-  font-size: 12px;
-  color: #6E6E73;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  line-height: 1.5;
-  letter-spacing: 0.01em;
-  font-family: var(--body-font-family);
-  font-weight: 400;
-  overflow-wrap: break-word;
-}
-
-@media (width <= 599px) {
-  .columns.columns7 > div {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-}
-
-@media (width >= 900px) {
-  .columns.columns7 {
-    padding-top: 40px;
-    padding-bottom: 40px;
   }
 }
 
@@ -243,7 +140,7 @@
   transition: background 0.2s, color 0.2s;
 }
 
-@media (width <= 900px) {
+@media (max-width: 900px) {
   .columns.columns8 > div {
     flex-direction: column;
     align-items: center;
@@ -300,7 +197,7 @@
   border-radius: 0;
 }
 
-@media (width <= 900px) {
+@media (max-width: 900px) {
   .columns.columns6 > div {
     flex-direction: column;
     align-items: stretch;
@@ -323,7 +220,7 @@
   width: 100%;
 }
 
-@media (width <= 700px) {
+@media (max-width: 700px) {
   .columns.columns11 > div {
     flex-direction: column;
     gap: 16px;
@@ -393,4 +290,127 @@
   line-height: 1.5;
   white-space: normal;
   overflow-wrap: break-word;
+}
+
+.columns.columns7 {
+  background: #fff;
+  padding: 40px 0;
+}
+
+.columns.columns7 > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .columns.columns7 > div {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (min-width: 900px) {
+  .columns.columns7 > div {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 48px;
+  }
+
+  .columns.columns7 {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+.columns.columns7 > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  position: relative;
+  height: 96px;
+}
+
+.columns.columns7 > div > div::after {
+  display: block;
+  content: "";
+  margin-bottom: 18px;
+  margin-top: 0;
+  width: 100%;
+  height: 24px;
+  pointer-events: none;
+}
+
+.columns.columns7 > div > div:nth-child(1)::after,
+.columns.columns7 > div > div:nth-child(2)::after {
+  width: 100%;
+  height: 24px;
+  margin-bottom: 18px;
+  background:
+    radial-gradient(circle at 8px 12px, #bdae9c 8px, transparent 9px),
+    radial-gradient(circle at 36px 12px, #c7c3b7 8px, transparent 9px),
+    radial-gradient(circle at 64px 12px, #edece7 8px, transparent 9px),
+    radial-gradient(circle at 92px 12px, #585a56 8px, transparent 9px);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: center;
+  max-width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.columns.columns7 > div > div:nth-child(3)::after,
+.columns.columns7 > div > div:nth-child(4)::after {
+  width: 100%;
+  height: 24px;
+  margin-bottom: 18px;
+  background:
+    radial-gradient(circle at 8px 12px, #4086de 8px, transparent 9px),
+    radial-gradient(circle at 32px 12px, #7bddde 8px, transparent 9px),
+    radial-gradient(circle at 56px 12px, #ffc6dc 8px, transparent 9px),
+    radial-gradient(circle at 80px 12px, #edece7 8px, transparent 9px),
+    radial-gradient(circle at 104px 12px, #252525 8px, transparent 9px);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: center;
+  max-width: 112px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.columns.columns7 > div > div:nth-child(5)::after {
+  width: 100%;
+  height: 24px;
+  margin-bottom: 18px;
+  background:
+    radial-gradient(circle at 16px 12px, #252525 8px, transparent 9px),
+    radial-gradient(circle at 48px 12px, #edece7 8px, transparent 9px),
+    radial-gradient(circle at 80px 12px, #e10600 8px, transparent 9px);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: center;
+  max-width: 96px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.columns.columns7 > div > div > p {
+  color: #6e6e73;
+  font-family: var(--body-font-family);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0;
+  overflow-wrap: break-word;
+  max-width: 124px;
 }
