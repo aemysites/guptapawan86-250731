@@ -1,4 +1,4 @@
-/* Disable no-descending-specificity globally */
+/* Disable no-descending-specificity rule globally */
 /* stylelint-disable no-descending-specificity */
 
 .columns > div {
@@ -64,7 +64,7 @@
   display: block;
 }
 
-@media (width >= 900px) {
+@media (min-width: 900px) {
   .columns > div {
     align-items: center;
     flex-direction: unset;
@@ -74,82 +74,6 @@
   .columns > div > div {
     flex: 1;
     order: unset;
-  }
-}
-
-.columns.columns8 > div {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 24px;
-  width: 100%;
-}
-
-.columns.columns8 > div > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.columns.columns8 > div > div > p {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.columns.columns8 > div > div > p > br {
-  display: none;
-}
-
-.columns.columns8 > div > div > p > a:first-of-type {
-  display: inline-block;
-  border: 1.5px solid #000;
-  color: #000;
-  background: #fff;
-  border-radius: 999px;
-  padding: 3px 14px;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  margin-bottom: 3px;
-  min-width: 120px;
-  max-width: 170px;
-  white-space: nowrap;
-  box-sizing: border-box;
-  transition: background 0.2s, color 0.2s;
-}
-
-.columns.columns8 > div > div > p > a:last-of-type {
-  display: inline-block;
-  border: 1.5px solid #000;
-  color: #fff;
-  background: #000;
-  border-radius: 999px;
-  padding: 3px 14px;
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  min-width: 120px;
-  max-width: 170px;
-  white-space: nowrap;
-  box-sizing: border-box;
-  transition: background 0.2s, color 0.2s;
-}
-
-@media (width <= 900px) {
-  .columns.columns8 > div {
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-  }
-
-  .columns.columns8 > div > div {
-    width: 100%;
-    max-width: 220px;
   }
 }
 
@@ -197,7 +121,7 @@
   border-radius: 0;
 }
 
-@media (width <= 900px) {
+@media (max-width: 900px) {
   .columns.columns6 > div {
     flex-direction: column;
     align-items: stretch;
@@ -224,14 +148,14 @@
   margin: 0 auto;
 }
 
-@media (width >= 600px) {
+@media (min-width: 600px) {
   .columns.columns7 > div {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
   }
 }
 
-@media (width >= 900px) {
+@media (min-width: 900px) {
   .columns.columns7 > div {
     grid-template-columns: repeat(5, 1fr);
     gap: 48px;
@@ -347,7 +271,7 @@
   min-height: 340px;
 }
 
-@media (width <= 900px) {
+@media (max-width: 900px) {
   .columns.columns11 > div {
     max-width: 100%;
     gap: 16px;
@@ -356,7 +280,7 @@
   }
 }
 
-@media (width <= 700px) {
+@media (max-width: 700px) {
   .columns.columns11 > div {
     flex-direction: column;
     gap: 14px;
@@ -443,13 +367,11 @@
   box-sizing: border-box;
 }
 
-/* Remove top spacing from any section or parent of columns block */
 .columns-wrapper {
   margin-top: 0;
   padding-top: 0;
 }
 
-/* Remove any vertical alignment issues for the flex row */
 .columns > div {
   display: flex;
   flex-direction: row;
@@ -460,7 +382,6 @@
   box-sizing: border-box;
 }
 
-/* Flush squares to the top, no margin, no border-radius, pure white bg */
 .columns > div > div {
   width: 32px;
   height: 32px;
@@ -478,23 +399,19 @@
   min-height: 32px;
 }
 
-/* Only the last visible square gets a right border */
 .columns > div > div:nth-child(3) {
   border-right: 1px solid #ccc;
 }
 
-/* Hide extra columns beyond 3 */
 .columns > div > div:nth-child(n+4) {
   display: none;
 }
 
-/* Remove outline and box-shadow if any inherited or from focus */
 .columns > div > div:focus {
   outline: none;
   box-shadow: none;
 }
 
-/* Ensure icon/image/svg within each square is centered and the correct size */
 .columns > div > div svg,
 .columns > div > div img,
 .columns > div > div i {
@@ -508,8 +425,7 @@
   max-height: 100%;
 }
 
-/* Responsive: stack vertically on small screens */
-@media (width <= 480px) {
+@media (max-width: 480px) {
   .columns > div {
     flex-direction: column;
     min-height: unset;
@@ -523,5 +439,128 @@
   .columns > div > div:nth-child(3) {
     border-bottom: 1px solid #ccc;
     border-right: 1px solid #ccc;
+  }
+}
+
+
+.columns.columns8 > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 48px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  .columns.columns8 > div {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .columns.columns8 > div {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+}
+
+.columns.columns8 > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 160px;
+  min-width: 120px;
+  max-width: 220px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.columns.columns8 > div > div > p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.columns.columns8 > div > div > p > br {
+  display: none;
+}
+
+/* Outlined top button */
+.columns.columns8 > div > div > p > a:first-of-type {
+  display: inline-block;
+  border: 1.5px solid #000;
+  color: #000;
+  background: #fff;
+  border-radius: 999px;
+  padding: 3px 22px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  min-width: 120px;
+  max-width: 180px;
+  width: 100%;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+  box-sizing: border-box;
+}
+
+/* Solid bottom button */
+.columns.columns8 > div > div > p > a:last-of-type {
+  display: inline-block;
+  border: none;
+  color: #fff;
+  background: #000;
+  border-radius: 999px;
+  padding: 3px 22px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  min-width: 120px;
+  max-width: 180px;
+  width: 100%;
+  margin-bottom: 0;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+  box-sizing: border-box;
+}
+
+/* Make sure both buttons are the same width per column */
+.columns.columns8 > div > div > p > a {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Center any text BELOW the buttons, if present */
+.columns.columns8 > div > div > p + * {
+  text-align: center;
+  margin-top: 12px;
+  color: #222;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .columns.columns8 > div > div {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .columns.columns8 > div > div > p > a:first-of-type,
+  .columns.columns8 > div > div > p > a:last-of-type {
+    font-size: 13px;
+    padding: 3px 10px;
+    min-width: 90px;
+    max-width: 100%;
   }
 }
