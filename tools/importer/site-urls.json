@@ -1,0 +1,17 @@
+{
+  "originUrl": "https://www.spark.co.nz",
+  "urls": [
+    {
+      "url": "https://www.spark.co.nz/shop/apple-shop/iphone/iphone-16-pro",
+      "source": "MANUAL",
+      "targetPath": "/shop/apple-shop/iphone/iphone-16-pro",
+      "id": "a35c60b2ffc4ce2ca36857b14478e2fac2f05cfa"
+    }
+  ],
+  "crawlOptions": {
+    "strategy": "manual",
+    "strategiesAttempted": [
+      "MANUAL"
+    ]
+  }
+}
