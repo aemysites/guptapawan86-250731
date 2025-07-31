@@ -1,9 +1,18 @@
-/* Disable no-descending-specificity rule globally */
+/* Disable no-descending-specificity globally */
 /* stylelint-disable no-descending-specificity */
 
 .columns > div {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: 32px;
+  max-width: none;
+  min-width: unset;
+  margin: 0;
+  padding: 0;
 }
 
 .columns img {
@@ -11,7 +20,40 @@
 }
 
 .columns > div > div {
-  order: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0;
+  margin: 0;
+  flex: 0 0 32px;
+  min-width: 0;
+  min-height: 0;
+  vertical-align: top;
+}
+
+.columns > div > div:not(:last-child) {
+  border-right: none;
+}
+
+.columns > div > div:nth-child(n+4) {
+  display: none;
+}
+
+.columns > div > div svg,
+.columns > div > div img,
+.columns > div > div i {
+  width: 20px;
+  height: 20px;
+  color: #555;
+  fill: #555;
+  display: block;
+  margin: auto;
 }
 
 .columns > div > .columns-img-col {
@@ -214,79 +256,6 @@
   }
 }
 
-.columns > div {
-  display: flex;
-  flex-direction: row;
-  gap: 0;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: auto;
-  height: 32px;
-  max-width: none;
-  min-width: unset;
-  margin: 0;
-  padding: 0;
-}
-
-.columns > div > div {
-  box-sizing: border-box;
-  width: 32px;
-  height: 32px;
-  background: #fff;
-  border: 1px solid #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  flex: 0 0 32px;
-  min-width: 0;
-  min-height: 0;
-  vertical-align: top;
-}
-
-.columns > div > div:not(:last-child) {
-  border-right: none;
-}
-
-.columns > div > div:nth-child(n+4) {
-  display: none;
-}
-
-.columns > div > div svg,
-.columns > div > div img,
-.columns > div > div i {
-  width: 20px;
-  height: 20px;
-  color: #555;
-  fill: #555;
-  display: block;
-  margin: auto;
-}
-
-@media (width <= 600px) {
-  .columns > div {
-    flex-direction: column;
-    align-items: flex-start;
-    width: auto;
-    height: auto;
-  }
-
-  .columns > div > div {
-    width: 32px;
-    height: 32px;
-    border-right: 1px solid #ccc;
-    border-bottom: none;
-    flex: 0 0 32px;
-  }
-
-  .columns > div > div:not(:last-child) {
-    border-bottom: none;
-    border-right: none;
-  }
-}
-
-
 .columns.columns6 > div {
   display: flex;
   flex-direction: row;
@@ -298,7 +267,7 @@
   margin: 0;
   background: none;
   box-sizing: border-box;
-  min-height: 180px; /* Ensures columns have height even if empty */
+  min-height: 180px;
 }
 
 .columns.columns6 > div > div {
@@ -312,9 +281,6 @@
   padding: 0;
   min-width: 60px;
   min-height: 160px;
-
-  /* Temporary debug background for visibility without images.
-     Remove or comment out when images are present. */
   background-color: #fafbfc;
   border-radius: 8px;
   transition: background 0.3s;
@@ -324,7 +290,6 @@
   background-color: #f0f0f0;
 }
 
-/* If/when images are present, ensure they scale and align as expected */
 .columns.columns6 img {
   display: block;
   max-height: 180px;
@@ -335,7 +300,6 @@
   border-radius: 0;
 }
 
-/* Responsive: stack columns vertically on smaller screens */
 @media (width <= 900px) {
   .columns.columns6 > div {
     flex-direction: column;
@@ -348,4 +312,85 @@
     min-width: 0;
     min-height: 120px;
   }
+}
+
+.columns.columns11 > div {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+
+@media (width <= 700px) {
+  .columns.columns11 > div {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.columns.columns11 > div > div {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #f7f7fa;
+  border-radius: 18px;
+  padding: 32px 24px 28px;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.columns.columns11 > div > div > p {
+  margin: 0;
+  padding: 0;
+}
+
+.columns.columns11 > div > div > p:first-child {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.columns.columns11 > div > div picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.columns.columns11 > div > div img {
+  max-width: 68px;
+  height: auto;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.columns.columns11 > div > div h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #181a1a;
+  text-align: center;
+  margin: 0 0 14px;
+  line-height: 1.3;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.columns.columns11 > div > div h3 + p {
+  font-size: 13px;
+  color: #676a6c;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  line-height: 1.5;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
