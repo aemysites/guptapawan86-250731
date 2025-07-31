@@ -1,4 +1,4 @@
-/* CSS with all validation errors fixed */
+/* Fixed CSS */
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -38,7 +38,6 @@
   padding: 32px 0;
 }
 
-/* Responsive multi-column grid */
 .columns.columns7 > div {
   display: grid;
   grid-template-columns: 1fr;
@@ -60,7 +59,6 @@
   }
 }
 
-/* Each column: vertical stack, left-aligned */
 .columns.columns7 > div > div {
   display: flex;
   flex-direction: column;
@@ -69,10 +67,9 @@
   min-width: 0;
   padding: 0 8px;
   position: relative;
-  padding-top: 28px; /* room for swatches row */
+  padding-top: 28px;
 }
 
-/* Swatch row: one pseudo "circle" with box-shadows for additional circles, all using perfect circles with gaps */
 .columns.columns7 > div > div::before {
   content: "";
   position: absolute;
@@ -86,36 +83,32 @@
   display: block;
 }
 
-/* Titanium 4 swatches (Desert, Natural, White, Black Titanium) */
 .columns.columns7 > div > div:nth-child(1)::before,
 .columns.columns7 > div > div:nth-child(2)::before {
-  background: #bdae9c; /* Desert */
+  background: #bdae9c;
   box-shadow:
     22px 0 0 0 #c7c3b7, /* Natural */
     44px 0 0 0 #edece7, /* White */
-    66px 0 0 0 #585a56; /* Black Titanium */
+    66px 0 0 0 #585a56;
 }
 
-/* Colors 5 swatches (Ultramarine, Teal, Pink, White, Black) */
 .columns.columns7 > div > div:nth-child(3)::before,
 .columns.columns7 > div > div:nth-child(4)::before {
-  background: #4086de; /* Ultramarine */
+  background: #4086de;
   box-shadow:
     22px 0 0 0 #7bddde,  /* Teal */
     44px 0 0 0 #ffc6dc,  /* Pink */
     66px 0 0 0 #edece7,  /* White */
-    88px 0 0 0 #252525;  /* Black */
+    88px 0 0 0 #252525;
 }
 
-/* 3 swatches: Midnight, Starlight, PRODUCT(RED) */
 .columns.columns7 > div > div:nth-child(5)::before {
-  background: #252525; /* Midnight */
+  background: #252525;
   box-shadow:
     22px 0 0 0 #edece7, /* Starlight */
-    44px 0 0 0 #e10600; /* PRODUCT(RED) */
+    44px 0 0 0 #e10600;
 }
 
-/* Text styles */
 .columns.columns7 > div > div > p {
   font-size: 12px;
   color: #6E6E73;
@@ -126,10 +119,9 @@
   letter-spacing: 0.01em;
   font-family: var(--body-font-family);
   font-weight: 400;
-  overflow-wrap: break-word; /* Fixed deprecated "word-break" property value */
+  overflow-wrap: break-word;
 }
 
-/* Responsive: stack vertically on small screens */
 @media (width <= 599px) {
   .columns.columns7 > div {
     grid-template-columns: 1fr;
@@ -141,5 +133,88 @@
   .columns.columns7 {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+}
+
+/* Adjusted selector order to fix no-descending-specificity */
+.columns.columns8 > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px; /* slightly tighter for a closer match */
+  width: 100%;
+}
+
+/* Each column */
+.columns.columns8 > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Remove unwanted margins from p */
+.columns.columns8 > div > div > p {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Remove <br> spacing between links */
+.columns.columns8 > div > div > p > br {
+  display: none;
+}
+
+/* Style the first link as outlined pill button */
+.columns.columns8 > div > div > p > a:first-of-type {
+  display: inline-block;
+  border: 1.5px solid #000;
+  color: #000;
+  background: #fff;
+  border-radius: 999px;
+  padding: 3px 14px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 3px;
+  min-width: 120px;
+  max-width: 170px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Style the second link as filled pill button */
+.columns.columns8 > div > div > p > a:last-of-type {
+  display: inline-block;
+  border: 1.5px solid #000;
+  color: #fff;
+  background: #000;
+  border-radius: 999px;
+  padding: 3px 14px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  min-width: 120px;
+  max-width: 170px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Responsive: stack columns below 700px */
+@media (width <= 900px) {
+  .columns.columns8 > div {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .columns.columns8 > div > div {
+    width: 100%;
+    max-width: 220px;
   }
 }
