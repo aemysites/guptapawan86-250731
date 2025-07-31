@@ -64,169 +64,6 @@
 }
 
 
-.table.table9 {
-  background: #fff;
-  padding: 48px 0 40px 0;
-  overflow-x: auto;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Helvetica", "Arial", sans-serif;
-}
-
-.table.table9 table {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  border-collapse: separate;
-  border-spacing: 0;
-  table-layout: fixed;
-  background: #fff;
-}
-
-.table.table9 th,
-.table.table9 td {
-  border: none;
-  text-align: center;
-  vertical-align: middle;
-  padding: 20px 28px;
-  background: none;
-  color: #1d1d1f;
-  font-weight: 400;
-  font-size: 1.04rem;
-  word-break: break-word;
-  line-height: 1.52;
-  box-sizing: border-box;
-}
-.table.table9 th p:first-child {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: #1d1d1f;
-  margin-bottom: 0.19em;
-  line-height: 1.08;
-  letter-spacing: -0.01em;
-}
-.table.table9 th p:not(:first-child) {
-  font-size: 1.07rem;
-  color: #a2a2a7;
-  font-weight: 400;
-  line-height: 1.36;
-  margin: 0.19em 0 0 0;
-}
-.table.table9 td p {
-  margin: 0.10em 0;
-  font-size: 1.08rem;
-  color: #1d1d1f;
-  line-height: 1.48;
-}
-.table.table9 td p + p {
-  margin-top: 0.33em;
-  color: #86868B;
-  font-size: 1.06rem;
-}
-.table.table9 td p:first-child {
-  font-weight: 700;
-  font-size: 1.12rem;
-  color: #1d1d1f;
-  letter-spacing: -0.01em;
-}
-.table.table9 th p:not(:first-child),
-.table.table9 td p:not(:first-child) {
-  color: #bdbdc2;
-  font-size: 1.06rem;
-  font-weight: 400;
-}
-.table.table9 th p,
-.table.table9 td p {
-  font-style: normal;
-  font-weight: 400;
-}
-.table.table9 th p:only-child,
-.table.table9 td p:only-child {
-  font-style: normal;
-  font-weight: 400;
-}
-.table.table9 th p,
-.table.table9 td p {
-}
-.table.table9 th p,
-.table.table9 td p {
-}
-.table.table9 th p,
-.table.table9 td p {
-}
-.table.table9 th p,
-.table.table9 td p {
-}
-.table.table9 th p,
-.table.table9 td p {
-}
-.table.table9 th p,
-.table.table9 td p {
-}
-@supports ((selector(:has(*))) or (selector(:nth-child(1)))) {
-  .table.table9 th p,
-  .table.table9 td p {
-  }
-}
-.table.table9 th p,
-.table.table9 td p {
-}
-.table.table9 th p,
-.table.table9 td p {
-}
-.table.table9 th p[style*="italic"],
-.table.table9 td p[style*="italic"],
-.table.table9 th p[style*="not applicable" i],
-.table.table9 td p[style*="not applicable" i] {
-  color: #cfd0d3;
-  font-style: italic;
-  font-weight: 400;
-}
-.table.table9 td hr {
-  border: none;
-  border-top: 1px solid #f3f3f5;
-  opacity: 0.5;
-  margin: 0.95em 0 0.8em 0;
-  height: 0;
-}
-.table.table9 table thead tr,
-.table.table9 table tbody tr,
-.table.table9.no-header table tbody tr,
-.table.table9.bordered table th,
-.table.table9.bordered table td {
-  border: none;
-}
-@media (min-width: 900px) {
-  .table.table9 tbody tr {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    align-items: stretch;
-  }
-  .table.table9 thead tr {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-@media (max-width: 900px) {
-  .table.table9 {
-    overflow-x: auto;
-    padding: 24px 0;
-  }
-  .table.table9 table {
-    min-width: 670px;
-  }
-  .table.table9 th,
-  .table.table9 td {
-    font-size: 0.98rem;
-    padding: 13px 8px;
-  }
-}
-@media (min-width: 1200px) {
-  .table.table9 table {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-}
-
-
 .table.table5 {
   background: #fff;
   padding: 0;
@@ -235,8 +72,6 @@
   max-width: 100%;
   margin: 0 auto;
 }
-
-/* Remove all borders and background from all table elements */
 .table.table5 table,
 .table.table5 thead,
 .table.table5 tbody,
@@ -247,8 +82,6 @@
   background: #fff;
   box-shadow: none;
 }
-
-/* Natural, content-hugging table layout */
 .table.table5 table {
   width: auto;
   max-width: 100%;
@@ -257,14 +90,10 @@
   border-collapse: separate;
   border-spacing: 0;
 }
-
-/* Header row height for comfortable vertical space */
 .table.table5 thead tr {
   height: 32px;
   min-height: 0;
 }
-
-/* Compact header cells with readable font and modest horizontal padding */
 .table.table5 th {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
   font-size: 13px;
@@ -283,8 +112,6 @@
   border: none;
   text-align: center;
 }
-
-/* Chevron-aligned text using flex */
 .table.table5 th p {
   display: flex;
   flex-direction: row;
@@ -300,8 +127,6 @@
   line-height: inherit;
   gap: 0;
 }
-
-/* Chevron styling, compact and visually centered */
 .table.table5 th p::after {
   display: inline-block;
   width: 8px;
@@ -312,8 +137,6 @@
   position: relative;
   top: 1px;
 }
-
-/* Responsive: shrink padding and font on small screens */
 @media (max-width: 700px) {
   .table.table5 th {
     font-size: 12px;
@@ -326,8 +149,6 @@
     margin-left: 1.5px;
   }
 }
-
-/* Remove any row or cell borders on hover/focus, too */
 .table.table5 th:focus,
 .table.table5 th:hover,
 .table.table5 tr:focus,
@@ -335,4 +156,183 @@
   border: none;
   outline: none;
   box-shadow: none;
+}
+
+
+.table.table9 {
+  background: #fff;
+  padding: 72px 0 64px 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Helvetica", "Arial", sans-serif;
+  box-sizing: border-box;
+}
+
+.table.table9 table {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  background: #fff;
+}
+
+/* ----- LAYOUT: Use CSS Grid for columns on desktop ----- */
+@media (min-width: 900px) {
+  .table.table9 thead tr,
+  .table.table9 tbody tr {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: start;
+  }
+}
+
+/* ----- Cell Styling & Alignment ----- */
+.table.table9 th,
+.table.table9 td {
+  border: none;
+  text-align: center;
+  vertical-align: top;
+  padding: 18px 8px 18px 8px;
+  background: none;
+  color: #1d1d1f;
+  font-weight: 400;
+  font-size: 1rem;
+  word-break: break-word;
+  line-height: 1.52;
+  box-sizing: border-box;
+}
+
+/* ----- HEADER: Large Spec Number ----- */
+.table.table9 th p:first-child {
+  font-size: 2.85rem;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 1em;
+  margin-top: 0;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+/* ----- HEADER: Sub-feature Lines (smaller, lighter) ----- */
+.table.table9 th p:not(:first-child) {
+  font-size: 1.05rem;
+  color: #a8a8ad;
+  font-weight: 400;
+  line-height: 1.33;
+  margin: 0;
+  margin-bottom: 0.19em;
+  text-align: center;
+}
+
+/* ----- TD Feature Group Title (dark, bold, more emphasis) ----- */
+.table.table9 td p:first-child {
+  font-size: 1.17rem;
+  font-weight: 700;
+  color: #1d1d1f;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.13em;
+  margin-top: 0;
+  line-height: 1.18;
+  text-align: center;
+}
+
+/* ----- TD Supporting Lines: Lighter, slightly larger, more readable ----- */
+.table.table9 td p:not(:first-child) {
+  font-size: 0.96rem;
+  color: #b7b7bb;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 0.19em;
+  line-height: 1.33;
+  text-align: center;
+}
+
+/* ----- Group spacing: Add extra margin after each feature group (simulate groups) ----- */
+/* Extra margin after major feature blocks in td and th */
+.table.table9 th p:nth-child(4),
+.table.table9 th p:nth-child(8),
+.table.table9 th p:nth-child(12),
+.table.table9 td p:nth-child(4),
+.table.table9 td p:nth-child(8),
+.table.table9 td p:nth-child(12),
+.table.table9 td p:nth-child(16) {
+  margin-bottom: 2em;
+}
+
+/* Remove extra margin from last paragraph in cell */
+.table.table9 th p:last-child,
+.table.table9 td p:last-child {
+  margin-bottom: 0;
+}
+
+.table.table9 th p,
+.table.table9 td p {
+  margin-top: 0;
+  text-align: center;
+}
+
+/* ----- "Not Applicable" or Disabled Lines: Lighter, italic ----- */
+.table.table9 th p[style*="italic"],
+.table.table9 td p[style*="italic"],
+.table.table9 th p[style*="not applicable" i],
+.table.table9 td p[style*="not applicable" i] {
+  color: #ededed;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ----- Remove all borders, lines, and shading ----- */
+.table.table9,
+.table.table9 table,
+.table.table9 th,
+.table.table9 td {
+  border: none;
+  background: #fff;
+}
+
+.table.table9 table thead tr,
+.table.table9 table tbody tr {
+  border: none;
+}
+
+/* Divider line in a cell (for hr) */
+.table.table9 td hr {
+  border: none;
+  border-top: 1px solid #ececec;
+  opacity: 0.6;
+  margin: 1.1em 0 1.1em 0;
+  height: 0;
+}
+
+/* Responsive: Stack columns vertically on small screens, reduce padding/font size */
+@media (max-width: 899.98px) {
+  .table.table9 {
+    padding: 18px 0;
+    overflow-x: auto;
+  }
+  .table.table9 table {
+    min-width: 670px;
+  }
+  .table.table9 th,
+  .table.table9 td {
+    font-size: 0.89rem;
+    padding: 10px 2px 10px 2px;
+  }
+  .table.table9 th p:first-child {
+    font-size: 1.15rem;
+    margin-bottom: 0.7em;
+  }
+  .table.table9 td p:first-child {
+    font-size: 0.98rem;
+  }
+  .table.table9 td p:not(:first-child) {
+    font-size: 0.85rem;
+  }
+}
+
+/* Prevent font inheritance issues and force font family */
+.table.table9 th p,
+.table.table9 td p {
+  font-family: inherit;
 }
