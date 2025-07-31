@@ -1,3 +1,4 @@
+/* CSS with all validation errors fixed */
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -29,5 +30,116 @@
   .columns > div > div {
     flex: 1;
     order: unset;
+  }
+}
+
+.columns.columns7 {
+  background: #fff;
+  padding: 32px 0;
+}
+
+/* Responsive multi-column grid */
+.columns.columns7 > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (width >= 600px) {
+  .columns.columns7 > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .columns.columns7 > div {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+  }
+}
+
+/* Each column: vertical stack, left-aligned */
+.columns.columns7 > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 0;
+  padding: 0 8px;
+  position: relative;
+  padding-top: 28px; /* room for swatches row */
+}
+
+/* Swatch row: one pseudo "circle" with box-shadows for additional circles, all using perfect circles with gaps */
+.columns.columns7 > div > div::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #b8ada2;
+  box-shadow: none;
+  display: block;
+}
+
+/* Titanium 4 swatches (Desert, Natural, White, Black Titanium) */
+.columns.columns7 > div > div:nth-child(1)::before,
+.columns.columns7 > div > div:nth-child(2)::before {
+  background: #bdae9c; /* Desert */
+  box-shadow:
+    22px 0 0 0 #c7c3b7, /* Natural */
+    44px 0 0 0 #edece7, /* White */
+    66px 0 0 0 #585a56; /* Black Titanium */
+}
+
+/* Colors 5 swatches (Ultramarine, Teal, Pink, White, Black) */
+.columns.columns7 > div > div:nth-child(3)::before,
+.columns.columns7 > div > div:nth-child(4)::before {
+  background: #4086de; /* Ultramarine */
+  box-shadow:
+    22px 0 0 0 #7bddde,  /* Teal */
+    44px 0 0 0 #ffc6dc,  /* Pink */
+    66px 0 0 0 #edece7,  /* White */
+    88px 0 0 0 #252525;  /* Black */
+}
+
+/* 3 swatches: Midnight, Starlight, PRODUCT(RED) */
+.columns.columns7 > div > div:nth-child(5)::before {
+  background: #252525; /* Midnight */
+  box-shadow:
+    22px 0 0 0 #edece7, /* Starlight */
+    44px 0 0 0 #e10600; /* PRODUCT(RED) */
+}
+
+/* Text styles */
+.columns.columns7 > div > div > p {
+  font-size: 12px;
+  color: #6E6E73;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  overflow-wrap: break-word; /* Fixed deprecated "word-break" property value */
+}
+
+/* Responsive: stack vertically on small screens */
+@media (width <= 599px) {
+  .columns.columns7 > div {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (width >= 900px) {
+  .columns.columns7 {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
