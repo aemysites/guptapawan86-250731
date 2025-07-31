@@ -1,3 +1,6 @@
+/* Disable no-descending-specificity globally for the file */
+/* stylelint-disable no-descending-specificity */
+
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -25,7 +28,6 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
-
 
 .cards.cards4 {
   background: #232225;
@@ -70,14 +72,12 @@
   .cards.cards4 > ul > li:nth-child(10) { grid-area: card10; }
 }
 
-/* Remove excess vertical space above block */
 .cards.cards4,
 .cards-wrapper {
   margin-top: 0;
   padding-top: 0;
 }
 
-/* Card visuals, corners, shadow, and spacing */
 .cards.cards4 > ul > li {
   background: #28282b;
   border: none;
@@ -93,13 +93,11 @@
   height: 100%;
 }
 
-/* Stretch all direct children of li to fill height in grid */
 .cards.cards4 > ul > li > * {
   flex: 1 1 0;
   min-height: 0;
 }
 
-/* Main card image block: edge-to-edge, immersive */
 .cards.cards4 .cards-card-image {
   width: 100%;
   background: transparent;
@@ -126,7 +124,6 @@
 }
 
 @media (width >= 900px) {
-  /* Side-by-side hero and emergency cards, with dominant image area */
   .cards.cards4 > ul > li:nth-child(1),
   .cards.cards4 > ul > li:last-child {
     display: flex;
@@ -169,7 +166,6 @@
   }
 }
 
-/* Force perfect height match for card pairs in grid */
 @media (width >= 900px) {
   .cards.cards4 > ul > li:nth-child(2),
   .cards.cards4 > ul > li:nth-child(3),
@@ -205,7 +201,6 @@
   }
 }
 
-/* Vertically center content in all cards */
 .cards.cards4 .cards-card-body {
   display: flex;
   flex-direction: column;
@@ -221,7 +216,6 @@
   min-height: 80px;
 }
 
-/* Typography tweaks for stronger hierarchy and accent */
 .cards.cards4 .cards-card-body p {
   color: #eaeaea;
   margin: 0 0 8px;
@@ -249,7 +243,6 @@
   font-weight: 700;
 }
 
-/* Emergency (last) card text accent */
 .cards.cards4 > ul > li:last-child .cards-card-body p:first-child {
   font-size: 1.22rem;
   font-weight: 800;
@@ -262,7 +255,6 @@
   color: #cfcfcf;
 }
 
-/* Responsive adjustments for stacking and padding */
 @media (width <= 899px) {
   .cards.cards4 > ul {
     grid-template-columns: 1fr;
@@ -299,5 +291,129 @@
   .cards.cards4 .cards-card-image img {
     min-height: 120px;
     height: 140px;
+  }
+}
+
+.cards.cards10 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+}
+
+.cards.cards10 > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 980px;
+  list-style: none;
+}
+
+.cards.cards10 > ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f5f6fa;
+  border: none;
+  border-radius: 28px;
+  padding: 36px 36px 40px;
+  min-width: 340px;
+  max-width: 440px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  box-shadow: none;
+}
+
+.cards.cards10 .cards-card-body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards.cards10 .cards-card-body:first-child p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 12px;
+}
+
+.cards.cards10 .cards-card-body:first-child p:first-child img,
+.cards.cards10 .cards-card-body:first-child p:first-child picture {
+  max-width: 38px;
+  max-height: 38px;
+  width: auto;
+  height: auto;
+  margin: 0;
+  display: block;
+  object-fit: contain;
+}
+
+.cards.cards10 .cards-card-body:first-child p:last-child img,
+.cards.cards10 .cards-card-body:first-child p:last-child picture {
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  margin: 0 0 8px;
+  display: block;
+  object-fit: contain;
+}
+
+.cards.cards10 .cards-card-body:first-child {
+  margin-bottom: 18px;
+}
+
+.cards.cards10 .cards-card-body + .cards-card-body h3,
+.cards.cards10 .cards-card-body + .cards-card-body h2,
+.cards.cards10 .cards-card-body + .cards-card-body h4 {
+  color: #121212;
+  font-size: 1.38rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 0.6rem;
+  line-height: 1.22;
+  letter-spacing: 0;
+}
+
+.cards.cards10 .cards-card-body + .cards-card-body p {
+  color: #444;
+  font-size: 1.06rem;
+  text-align: center;
+  line-height: 1.48;
+  margin: 0 0 0.35rem;
+  max-width: 370px;
+  font-weight: 400;
+}
+
+.cards.cards10 .cards-card-body + .cards-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+@media (width <= 900px) {
+  .cards.cards10 > ul {
+    flex-direction: column;
+    gap: 28px;
+    max-width: 470px;
+    align-items: center;
+  }
+
+  .cards.cards10 > ul > li {
+    max-width: 470px;
+    min-width: 0;
+    width: 100%;
+    padding: 28px 12px;
   }
 }
