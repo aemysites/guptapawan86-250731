@@ -1,4 +1,4 @@
-/* Disable no-descending-specificity globally */
+/* Disable no-descending-specificity rule globally */
 /* stylelint-disable no-descending-specificity */
 
 .columns > div {
@@ -22,7 +22,7 @@
   display: block;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .columns > div {
     align-items: center;
     flex-direction: unset;
@@ -48,13 +48,13 @@
   margin: 0 auto;
 }
 
-@media (min-width: 600px) {
+@media (width >= 600px) {
   .columns.columns7 > div {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .columns.columns7 > div {
     grid-template-columns: repeat(5, 1fr);
     gap: 40px;
@@ -124,14 +124,14 @@
   overflow-wrap: break-word;
 }
 
-@media (max-width: 599px) {
+@media (width <= 599px) {
   .columns.columns7 > div {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .columns.columns7 {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -201,7 +201,7 @@
   transition: background 0.2s, color 0.2s;
 }
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .columns.columns8 > div {
     flex-direction: column;
     align-items: center;
@@ -222,8 +222,6 @@
   align-items: flex-start;
   width: auto;
   height: 32px;
-
-  /* Prevent unwanted stretching in parent blocks */
   max-width: none;
   min-width: unset;
   margin: 0;
@@ -244,22 +242,17 @@
   flex: 0 0 32px;
   min-width: 0;
   min-height: 0;
-
-  /* Ensure no shifting from baseline alignment */
   vertical-align: top;
 }
 
-/* Remove double border between boxes */
 .columns > div > div:not(:last-child) {
   border-right: none;
 }
 
-/* Hide extra columns after the third */
 .columns > div > div:nth-child(n+4) {
   display: none;
 }
 
-/* Handle icon sizing and color if present */
 .columns > div > div svg,
 .columns > div > div img,
 .columns > div > div i {
@@ -271,8 +264,7 @@
   margin: auto;
 }
 
-/* Make sure on small screens these three boxes stack vertically */
-@media (max-width: 600px) {
+@media (width <= 600px) {
   .columns > div {
     flex-direction: column;
     align-items: flex-start;
@@ -291,5 +283,69 @@
   .columns > div > div:not(:last-child) {
     border-bottom: none;
     border-right: none;
+  }
+}
+
+
+.columns.columns6 > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 24px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: none;
+  box-sizing: border-box;
+  min-height: 180px; /* Ensures columns have height even if empty */
+}
+
+.columns.columns6 > div > div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: none;
+  border: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 60px;
+  min-height: 160px;
+
+  /* Temporary debug background for visibility without images.
+     Remove or comment out when images are present. */
+  background-color: #fafbfc;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.columns.columns6 > div > div:hover {
+  background-color: #f0f0f0;
+}
+
+/* If/when images are present, ensure they scale and align as expected */
+.columns.columns6 img {
+  display: block;
+  max-height: 180px;
+  height: auto;
+  width: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+/* Responsive: stack columns vertically on smaller screens */
+@media (width <= 900px) {
+  .columns.columns6 > div {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    min-height: 0;
+  }
+
+  .columns.columns6 > div > div {
+    min-width: 0;
+    min-height: 120px;
   }
 }
